@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace SnakeGameRemake
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
-        public Form1()
+        GameZone gameZone = null;
+        public Game()
         {
             InitializeComponent();
+            InitializeGame();
+        }
+
+        private void InitializeGame()
+        {
+            gameZone = new GameZone();
+            this.Controls.Add(gameZone);
         }
     }
 }
