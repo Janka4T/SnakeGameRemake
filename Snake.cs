@@ -12,10 +12,17 @@ namespace SnakeGameRemake
 {
     class Snake
     {
-        private PictureBox snakePixel;
+        private Form game = null;
+        private PictureBox snakePixel = null;
         private List<PictureBox> snakePixels = new List<PictureBox>();
 
-        public Snake()
+        public Snake(Form form)
+        {
+            InitializeSnake();
+            game = form;
+        }
+
+        private void InitializeSnake()
         {
             snakePixel = new PictureBox()
             {
@@ -26,7 +33,11 @@ namespace SnakeGameRemake
                 Top = 200
             };
             snakePixels.Add(snakePixel);
-            
+        }
+
+        public void Render()
+        {
+             
         }
     }
 }

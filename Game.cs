@@ -31,7 +31,7 @@ namespace SnakeGameRemake
             this.Controls.Add(gameZone);
 
             snake = new Snake();
-            
+           
         }
     }
 }
